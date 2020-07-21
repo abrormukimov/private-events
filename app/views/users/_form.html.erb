@@ -1,0 +1,11 @@
+<%= form_for(@user) do |f| %>
+  <div class="">
+    <div class="is-center">
+      <%= f.label :name %>
+      <%= f.text_field :name, placeholder: "Enter your name", autofocus: true %>
+    </div>
+    <div class="is-center">
+      <%= f.submit "Sign Up" %>
+    </div>
+  </div>
+<% end %>
