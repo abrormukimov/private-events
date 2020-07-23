@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>PrivateEvents</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "PrivateEvents" %></title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
   </head>
-
   <body>
+    <% if flash[:notice] %>
+      <%= notice %>
+    <% end %>
+    <% if session[:user_id] %>
+      <%= current_user.name %>
+    <% else %>
+      <p>You are not logged in</p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

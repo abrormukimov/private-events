@@ -1,0 +1,21 @@
+<h1>Create a new event</h1>
+
+<div class="is-center">
+  <%= form_for(@event) do |f| %>
+    <div class="is-center">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="is-center">
+      <%= f.label :description %>
+      <%= f.text_area :description, placeholder: "Description"%>
+    </div>
+    <div class="is-center">
+      <%= f.label :date %>
+      <%= f.date_field :date %>
+    </div>
+    <div class="is-center">
+      <%= f.submit "Create Event" %>
+    </div>
+  <% end %>
+</div>

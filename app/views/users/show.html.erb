@@ -1,0 +1,37 @@
+<h1><%= current_user.name%>'s profile page!</h1>
+
+<div class="is-center">
+  <% current_user.events.each do |event| %>
+    <p>
+      <%= link_to event.title, event_path(event) %>
+    </p>
+    <p>
+      <%= event.description %>
+    </p>
+  <% end %>
+</div>
+
+<% @attended_events.each do |attended_event| %>
+  <div class="is-center">List of attended events
+    <div class="">
+      <%= link_to attended_event.title, event_path(attended_event) %>
+    </div>
+  </div>
+<% end %>
+
+<% @past_events.each do |past_event| %>
+  <div class="is-center">List of past events
+    <div class="">
+      <%= link_to past_event.title, event_path(past_event) %>
+    </div>
+  </div>
+<% end %>
+
+
+<div class="is-center">
+  <%= link_to "Create Event", new_event_path %>
+</div>
+
+<div class="is-center">
+  <%= link_to "Log Out", session_path, method: :delete %>
+</div>

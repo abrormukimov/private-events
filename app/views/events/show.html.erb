@@ -1,0 +1,22 @@
+<div class="is-center">Created by:
+  <%= @event.creator.name %>
+</div>
+
+<div class="is-center">
+  <%= @event.title %>
+</div>
+<div class="is-center">
+  <%= @event.description %>
+</div>
+<div class="is-center">
+  <%= @event.date %>
+</div>
+
+<div class="is-center">List of attendees
+  <div class="is-center">
+    <%= @attendees %>
+  </div>
+</div>
+<div class="is-center">
+  <%= link_to "Back to events list", events_path %>
+</div>

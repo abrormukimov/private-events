@@ -1,0 +1,11 @@
+<h1>Log In Page</h1>
+
+<%= form_with(url: sessions_path) do |f| %>
+  <div class="is-center">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+  <div class="is-center">
+    <%= f.submit "Log In" %>
+  </div>
+<% end %>

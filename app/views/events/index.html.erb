@@ -1,0 +1,12 @@
+<h1>All Events</h1>
+
+<% @events.each do |event| %>
+<div class="is-center">
+  <%= link_to event.title, event_path(event) %>
+</div>
+<br>
+<% end %>
+
+<div class="is-center">
+  <%= link_to "Log In", new_session_path %>
+</div>
