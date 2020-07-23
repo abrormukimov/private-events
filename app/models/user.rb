@@ -6,4 +6,8 @@ class User < ApplicationRecord
   def past_events
     Event.all.where("DATE(date) < DATE(?)", Time.now).order("date DESC")
   end
+
+  def upcoming_events
+    Event.all.where("DATE(date) >= DATE(?)", Time.now).order("date ASC")
+  end
 end

@@ -147,6 +147,7 @@ GEM
       ffi (~> 1.0)
     regexp_parser (1.7.1)
     rubyzip (2.3.0)
+    sass (3.7.4)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -160,6 +161,8 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    semantic-ui-sass (2.4.2.0)
+      sass (>= 3.2)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -215,6 +218,7 @@ DEPENDENCIES
   rails (~> 6.0.3, >= 6.0.3.2)
   sass-rails (>= 6)
   selenium-webdriver
+  semantic-ui-sass
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)

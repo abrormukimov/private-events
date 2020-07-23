@@ -27,6 +27,14 @@
   </div>
 <% end %>
 
+<% @upcoming_events.each do |upcoming_event| %>
+  <div class="is-center">List of upcoming events
+    <div class="">
+      <%= link_to upcoming_event.title, event_path(upcoming_event) %>
+    </div>
+  </div>
+<% end %>
+
 
 <div class="is-center">
   <%= link_to "Create Event", new_event_path %>
