@@ -6,10 +6,10 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { minimum: 4 }
 
   def past_events
-    Event.all.where("DATE(date) < DATE(?)", Time.now).order("date DESC")
+    Event.all.where('DATE(date) < DATE(?)', Time.now).order('date DESC')
   end
 
   def upcoming_events
-    Event.all.where("DATE(date) >= DATE(?)", Time.now).order("date ASC")
+    Event.all.where('DATE(date) >= DATE(?)', Time.now).order('date ASC')
   end
 end

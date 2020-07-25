@@ -85,6 +85,11 @@ body {
   height: 640px;
 }
 
+.flash-mes {
+  color: #fff;
+  text-align: center;
+}
+
 .index-title {
   margin: 0 auto;
   color: rgb(255, 255, 255);
@@ -277,7 +282,7 @@ body {
   background: white;
   border-radius: 1rem;
   padding: 1.5rem;
-  width: 10rem;
+  width: 12rem;
   box-shadow: 3px 3px 12px 2px rgba(black, 0.6);
   transition: 0.2s;
 }
