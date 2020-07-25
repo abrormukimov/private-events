@@ -1,11 +1,28 @@
-<h1>Log In Page</h1>
+<div class="login-ctn">
+  <div class="half-div">
+    <div class="login-h1">
+      <h1><span>d</span><span>sultonova</span></h1>
+    </div>
+  </div>
+  <div class="half-div">
+    <div class="login-input">
+      <%= form_with(url: login_path) do |f| %>
+        <%= f.text_field :name, autofocus: true, placeholder: 'Type your name', class: "login-input1" %><br>
+        <%= f.submit "Log In", class: "login-btn" %>
+      <% end %>
+      <div>
+        <div class="signup">
+          <%= link_to 'Sign Up', signup_path, class: "signup-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= form_with(url: sessions_path) do |f| %>
-  <div class="is-center">
-    <%= f.label :name %>
-    <%= f.text_field :name, autofocus: true %>
-  </div>
-  <div class="is-center">
-    <%= f.submit "Log In" %>
-  </div>
-<% end %>
+
+
+  
+
+
+
+

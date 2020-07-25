@@ -1,45 +1,54 @@
-<h1><%= current_user.name%>'s profile page!</h1>
-
-<div class="is-center">
-  <% current_user.events.each do |event| %>
-    <p>
-      <%= link_to event.title, event_path(event) %>
-    </p>
-    <p>
-      <%= event.description %>
-    </p>
-  <% end %>
+<div class="ctn">
+  <nav class="navbar">
+    <div class="brand-ctn">
+      <p class="navbar-brand"></p>
+    </div>
+    <div class="form-inline profile1">
+      <%= link_to "Create Event", new_event_path, class: "btn btn-outline-success" %>
+    </div>
+    <div class="form-inline profile2">
+      <%= show_profile %>
+    </div>
+    <div class="form-inline">
+      <%= check_signin %>
+    </div>
+  </nav>
+  <div class="bck-img">
+    <h2 class="f-event-title">MY EVENTS</h2>
+    <div class="cards">
+      <% current_user.events.each do |event| %>
+        <div class="card">
+          <h2><%= link_to event.title, event_path(event) %></h2>
+          <p><%= event.description %></p>
+        </div>
+      <% end %> 
+    </div>
+  </div>
 </div>
-
-<% @attended_events.each do |attended_event| %>
-  <div class="is-center">List of attended events
-    <div class="">
-      <%= link_to attended_event.title, event_path(attended_event) %>
+<div>
+  <div class="title-ctn">
+    <h2 class="f-event-title">UPCOMING EVENTS</h2>
+    <div class="cards">
+      <% @upcoming_events.each do |event| %>
+        <div class="card">
+          <h2><%= link_to event.title, event_path(event), class: "event-title" %></h2>
+          <p><%= event.description %></p>
+        </div>
+      <% end %>
     </div>
   </div>
-<% end %>
-
-<% @past_events.each do |past_event| %>
-  <div class="is-center">List of past events
-    <div class="">
-      <%= link_to past_event.title, event_path(past_event) %>
+  <div class="title-ctn">
+    <h2 class="f-event-title">PAST EVENTS</h2>
+    <div class="cards">
+      <% @past_events.each do |event| %>
+        <div class="card">
+          <h2><%= link_to event.title, event_path(event), class: "event-title" %></h2>
+          <p><%= event.description %></p>
+        </div>
+      <% end %>
     </div>
   </div>
-<% end %>
-
-<% @upcoming_events.each do |upcoming_event| %>
-  <div class="is-center">List of upcoming events
-    <div class="">
-      <%= link_to upcoming_event.title, event_path(upcoming_event) %>
-    </div>
+  <div class="footer">
+    <p>&copy; dsultonova</p>
   </div>
-<% end %>
-
-
-<div class="is-center">
-  <%= link_to "Create Event", new_event_path %>
-</div>
-
-<div class="is-center">
-  <%= link_to "Log Out", session_path, method: :delete %>
 </div>

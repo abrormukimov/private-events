@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_action :require_login
 
   def index
     @users = User.all.order("created_at desc")
@@ -10,14 +9,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = current_user.new(user_params)
+    @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       flash[:notice] = "You have successfully signed up!"
+      redirect_to user_path(@user)
     else
       render :new
     end
-
-    redirect_to user_path(@user)
   end
 
   def show
@@ -30,13 +29,6 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:name)
-  end
-
-  def require_login
-    return true if session[:user_id]
-
-    redirect_to new_session_path
-    false
   end
 
 end

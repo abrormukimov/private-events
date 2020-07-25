@@ -1,21 +1,24 @@
-<h1>Create a new event</h1>
-
-<div class="is-center">
+<div class="login-box">
+  <h2>Create a new event</h2>
   <%= form_for(@event) do |f| %>
-    <div class="is-center">
-      <%= f.label :title %>
-      <%= f.text_field :title %>
+    <div class="user-box">
+      <%= f.text_field :title, type: 'text' %>
+      <%= f.label :title, type: 'label' %>
     </div>
-    <div class="is-center">
-      <%= f.label :description %>
-      <%= f.text_area :description, placeholder: "Description"%>
+    <div class="user-box">
+      <%= f.text_field :description%>
+      <%= f.label :description, type: 'text' %>
     </div>
-    <div class="is-center">
-      <%= f.label :date %>
+    <div class="user-box">
       <%= f.date_field :date %>
+      <%= f.label :date %>
     </div>
-    <div class="is-center">
-      <%= f.submit "Create Event" %>
+    <div class="fire">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <%= f.submit "Create Event", class: "create-ev-btn" %>
     </div>
   <% end %>
 </div>

@@ -1,22 +1,22 @@
-<div class="is-center">Created by:
-  <%= @event.creator.name %>
-</div>
-
-<div class="is-center">
-  <%= @event.title %>
-</div>
-<div class="is-center">
-  <%= @event.description %>
-</div>
-<div class="is-center">
-  <%= @event.date %>
-</div>
-
-<div class="is-center">List of attendees
-  <div class="is-center">
-    <%= @attendees %>
+<div class="ctn">
+  <div class="user-event-title">
+    You created a new event!
   </div>
-</div>
-<div class="is-center">
-  <%= link_to "Back to events list", events_path %>
+
+  <div class="block">
+    <img src="https://api.adorable.io/avatars/285/abott@adorable.io.png" alt="">
+    <div>
+      <h2><%= @event.title %></h2>
+      <p><%= @event.description %></p>
+      <p><%= @event.date %></p><br>
+      <h4>List of Attendees</h4>
+      <p><%= list_of_attendees %></p>
+    </div>
+  </div>
+  <div class="back-to">
+    <%= link_to "Homepage", root_path, class: "back" %>
+  </div>
+  <div class="back-to">
+    <%= link_to "Back to Profile", user_path(current_user), class: "back" %>
+  </div>
 </div>

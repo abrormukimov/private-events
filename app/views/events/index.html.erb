@@ -3,15 +3,18 @@
     <div class="brand-ctn">
       <p class="navbar-brand"></p>
     </div>
-    <form class="form-inline">
-      <%= link_to "Log In", new_session_path, class: "btn btn-outline-success" %>
-    </form>
+    <div class="form-inline profile">
+      <%= show_profile %>
+    </div>
+    <div class="form-inline">
+      <%= check_signin %>
+    </div>
   </nav>
 
   <div class="bck-img">
     <p class="index-title t-first">Lovely Summer Events</p>
     <p class="index-title t-second">Get The Latest Upcomings</p>
-    <%= link_to "Sign Up", signup_path, class: "btn btn-outline-success btn-center" %>
+    <%= check_signup %>
   </div>
 </div>
 
@@ -19,14 +22,11 @@
   <div class="title-ctn">
       <h2 class="f-event-title">UPCOMING EVENTS</h2>
     </div>
-    <% Event.upcoming.each do |event| %>
+    <% @upcoming_events.each do |event| %>
       <div class="event event-upcoming">
         <div class="event-control">
           <div class="title-content">
-            <%= link_to event.title, event_path(event), class: "event-title" %>
-          </div>
-          <div class="desc-content">
-            <%# <%= image_tag 'past_event.jpg', class: "corner-image" %> 
+            <%= link_to event.title, event_path(event), class: "event-title-ind" %>
           </div>
         </div>
       </div>
@@ -35,10 +35,12 @@
   <div class="title-ctn">
     <h2 class="f-event-title">PAST EVENTS</h2>
   </div>
-  <% Event.past.each do |event| %>
+  <% @past_events.each do |event| %>
     <div class="event event-past">
       <div class="event-control">
-        <%= link_to event.title, event_path(event), class: "event-title" %>
+        <div class="title-content"> 
+          <%= link_to event.title, event_path(event), class: "event-title-ind" %>
+        </div>
       </div>
     </div>
   <% end %>  

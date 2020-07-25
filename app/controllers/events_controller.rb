@@ -3,6 +3,8 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    @upcoming_events = Event.upcoming
+    @past_events = Event.past
   end
 
   def new
@@ -45,7 +47,7 @@ class EventsController < ApplicationController
   def require_login
     return true if session[:user_id]
 
-    redirect_to new_session_path
+    redirect_to login_path
     false
   end
 end
