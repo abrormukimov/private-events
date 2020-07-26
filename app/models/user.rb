@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :events, foreign_key: :creator_id, class_name: 'Event', dependent: :destroy
 
   validates :name, presence: true, length: { minimum: 4 }
+  validates_uniqueness_of :name
 
   def past_events
     Event.all.where('DATE(date) < DATE(?)', Time.now).order('date DESC')
