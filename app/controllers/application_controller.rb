@@ -8,4 +8,12 @@ class ApplicationController < ActionController::Base
   def logged_in?
     current_user
   end
+
+  def self.setting_session_userid_to_test(userid)
+    @userid = userid
+  end
+
+  def self.session_user_id_to_test
+    @userid
+  end
 end

@@ -4,6 +4,7 @@ class Event < ApplicationRecord
   belongs_to :creator, class_name: 'User'
   validates :title, presence: true, length: { minimum: 4 }
   validates :description, presence: true, length: { minimum: 5 }
+  validates :date, presence: true
 
   scope :past, -> { Event.all.where('DATE(date) < DATE(?)', Time.now).order('date DESC') }
   scope :upcoming, -> { Event.all.where('DATE(date) >= DATE(?)', Time.now).order('date DESC') }
