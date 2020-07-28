@@ -5,6 +5,7 @@ AllCops:
     - "config/**/*"
     - "Guardfile"
     - "Rakefile"
+    - "vendor/*"
     - "node_modules/**/*"
 
   DisplayCopNames: true
