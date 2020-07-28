@@ -12,6 +12,7 @@ files:
     - "db/*"
     - "config/*"
     - "Guardfile"
+    - "vendor/*"
     - "Rakefile"
     - "README.md"
     - "node_modules/**/*"
