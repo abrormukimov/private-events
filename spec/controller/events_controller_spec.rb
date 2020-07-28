@@ -18,6 +18,4 @@ RSpec.describe 'Events Controller', type: :feature do
     expect(page).to have_content('You have successfully created a new event!')
     expect(page).to have_link('Back to Profile', href: '/users/1')
   end
-
-
 end

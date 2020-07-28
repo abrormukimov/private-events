@@ -1,5 +1,5 @@
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.1/ext/ffi_c
-/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200726-39445-8tlztz.rb extconf.rb
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200728-5037-grlpqi.rb extconf.rb
 checking for ffi_prep_closure_loc() in -lffi... yes
 checking for ffi_prep_cif_var()... yes
 checking for ffi_raw_call()... yes
@@ -39,4 +39,4 @@ linking shared-object ffi_c.so
 
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.1/ext/ffi_c
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20200726-39445-10hu76o
+/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20200728-5037-6lcq68

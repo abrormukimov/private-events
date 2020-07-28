@@ -1,5 +1,5 @@
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/sqlite3-1.4.2/ext/sqlite3
-/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200726-50431-1xcqcl3.rb extconf.rb
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200728-5037-13ez3ay.rb extconf.rb
 checking for sqlite3.h... yes
 checking for pthread_create() in -lpthread... yes
 checking for -ldl... yes
@@ -73,4 +73,4 @@ linking shared-object sqlite3/sqlite3_native.so
 
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/sqlite3-1.4.2/ext/sqlite3
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 sqlite3_native.so ./.gem.20200726-50431-1mg2aen/sqlite3
+/usr/bin/install -c -m 0755 sqlite3_native.so ./.gem.20200728-5037-14hoao7/sqlite3

@@ -77,7 +77,7 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :transaction
   end
 
-  config.before(:each, js: :true) do
+  config.before(:each, js: true) do
     DatabaseCleaner.strategy = :truncation
   end
   # This block must be here, do not combine with the other `before(:each)` block.
@@ -90,8 +90,8 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
-  Shoulda::Matchers.configure do |config|
-    config.integrate do |with|
+  Shoulda::Matchers.configure do |confi|
+    confi.integrate do |with|
       with.test_framework :rspec
       with.library :rails
     end

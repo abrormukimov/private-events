@@ -1,5 +1,5 @@
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
-/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200726-50431-folp7e.rb extconf.rb
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200728-5037-qg11ot.rb extconf.rb
 creating Makefile
 
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
@@ -77,4 +77,4 @@ linking shared-object sassc/libsass.so
 
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 libsass.so ./.gem.20200726-50431-rb1qtm/sassc
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20200728-5037-1eu7cqf/sassc

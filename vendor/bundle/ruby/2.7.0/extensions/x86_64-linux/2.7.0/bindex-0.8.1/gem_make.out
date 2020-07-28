@@ -1,5 +1,5 @@
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
-/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200726-39445-1wo1fps.rb extconf.rb
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200728-5037-8m5lve.rb extconf.rb
 creating Makefile
 
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
@@ -12,4 +12,4 @@ linking shared-object skiptrace/internal/cruby.so
 
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 cruby.so ./.gem.20200726-39445-xfdv2a/skiptrace/internal
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20200728-5037-yr79yz/skiptrace/internal

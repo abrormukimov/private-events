@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe Event, :type => :model do
-  subject {
+RSpec.describe Event, type: :model do
+  subject do
     User.create(name: 'Abror')
     Event.new(title: 'title',
               description: 'description',
@@ -9,7 +9,7 @@ RSpec.describe Event, :type => :model do
               created_at: Time.now,
               updated_at: Time.now + 1.day,
               creator_id: 1)
-  }
+  end
 
   describe 'Validations' do
     it 'is valid with valid attributes' do
