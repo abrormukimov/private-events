@@ -1,5 +1,5 @@
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
-/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200728-5037-ljhfxl.rb extconf.rb
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200728-38454-1481erh.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... yes
 checking for sys/select.h... yes
@@ -57,4 +57,4 @@ linking shared-object nio4r_ext.so
 
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.2/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20200728-5037-1tb0nf6
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20200728-38454-hlnq4w

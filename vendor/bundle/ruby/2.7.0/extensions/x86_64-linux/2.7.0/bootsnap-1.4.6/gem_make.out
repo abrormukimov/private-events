@@ -1,5 +1,5 @@
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
-/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200728-5037-13yfzd3.rb extconf.rb
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200728-38454-rtsbrq.rb extconf.rb
 creating Makefile
 
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
@@ -30,4 +30,4 @@ linking shared-object bootsnap/bootsnap.so
 
 current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20200728-5037-1vcacya/bootsnap
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20200728-38454-u7a8rn/bootsnap
