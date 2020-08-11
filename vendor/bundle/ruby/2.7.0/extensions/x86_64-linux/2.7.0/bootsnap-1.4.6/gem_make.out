@@ -1,0 +1,33 @@
+current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20200728-38454-rtsbrq.rb extconf.rb
+creating Makefile
+
+current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: In function ‘bs_cache_path’:
+bootsnap.c:272:39: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘uint64_t’ {aka ‘long unsigned int’} [-Wformat=]
+  272 |   sprintf(*cache_path, "%s/%02x/%014llx", cachedir, first_byte, remainder);
+      |                                 ~~~~~~^                         ~~~~~~~~~
+      |                                       |                         |
+      |                                       long long unsigned int    uint64_t {aka long unsigned int}
+      |                                 %014lx
+bootsnap.c: In function ‘prot_input_to_storage’:
+bootsnap.c:814:7: warning: passing argument 3 of ‘rb_rescue2’ from incompatible pointer type [-Wincompatible-pointer-types]
+  814 |       rescue_input_to_storage, Qnil,
+      |       ^~~~~~~~~~~~~~~~~~~~~~~
+      |       |
+      |       VALUE (*)(VALUE) {aka long unsigned int (*)(long unsigned int)}
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from bootsnap.c:15:
+/usr/include/ruby-2.7.0/ruby/ruby.h:1988:40: note: expected ‘VALUE (*)(VALUE,  VALUE)’ {aka ‘long unsigned int (*)(long unsigned int,  long unsigned int)’} but argument is of type ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’}
+ 1988 | VALUE rb_rescue2(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE,...);
+      |                                        ^~~~~~~~~~~~~~~~~~~~~
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/abrormukimov/Documents/Microverse/rails/private-events/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20200728-38454-u7a8rn/bootsnap

@@ -1,0 +1,51 @@
+<div class="ctn">
+  <nav class="navbar">
+    <div class="brand-ctn">
+      <p class="navbar-brand"></p>
+    </div>
+    <div class="form-inline profile">
+      <%= show_profile %>
+    </div>
+    <div class="form-inline">
+      <%= check_signin %>
+    </div>
+  </nav>
+
+  <div class="bck-img">
+    <p class="index-title t-first">Lovely Summer Events</p>
+    <p class="index-title t-second">Get The Latest Upcomings</p>
+    <%= check_signup %>
+  </div>
+</div>
+
+<div>
+  <div class="title-ctn">
+      <h2 class="f-event-title">UPCOMING EVENTS</h2>
+    </div>
+    <% @upcoming_events.each do |event| %>
+      <div class="event event-upcoming">
+        <div class="event-control">
+          <div class="title-content">
+            <%= link_to event.title, event_path(event), class: "event-title-ind" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  <div class="title-ctn">
+    <h2 class="f-event-title">PAST EVENTS</h2>
+  </div>
+  <% @past_events.each do |event| %>
+    <div class="event event-past">
+      <div class="event-control">
+        <div class="title-content"> 
+          <%= link_to event.title, event_path(event), class: "event-title-ind" %>
+        </div>
+      </div>
+    </div>
+  <% end %>  
+  
+  <div class="footer">
+    <p>&copy; dsultonova</p>
+  </div>
+</div>

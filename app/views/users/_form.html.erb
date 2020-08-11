@@ -1,0 +1,22 @@
+<div class="login-ctn signup-ctn">
+  <div class="half-div">
+    <div class="login-h1">
+      <h1><span>d</span><span>sultonova</span></h1>
+    </div>
+  </div>
+  <div class="half-div">
+    <div class="login-input">
+      <%= form_for(@user) do |f| %>
+        <%= f.text_field :name, autofocus: true, placeholder: 'Type your name', class: "login-input1" %><br>
+        <%= f.submit "Sign Up", class: "login-btn signup-button" %>
+      <% end %>
+      <div>
+        <div class="signup">
+          <%= link_to 'Homepage', root_path, class: "signup-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

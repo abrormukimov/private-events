@@ -1,0 +1,54 @@
+<div class="ctn">
+  <nav class="navbar">
+    <div class="brand-ctn">
+      <p class="navbar-brand"></p>
+    </div>
+    <div class="form-inline profile1">
+      <%= link_to "Create Event", new_event_path, class: "btn btn-outline-success" %>
+    </div>
+    <div class="form-inline profile2">
+      <%= show_profile %>
+    </div>
+    <div class="form-inline">
+      <%= check_signin %>
+    </div>
+  </nav>
+  <div class="bck-img">
+    <h2 class="f-event-title">MY EVENTS</h2>
+    <div class="cards">
+      <% current_user.events.each do |event| %>
+        <div class="card">
+          <h2><%= link_to event.title, event_path(event) %></h2>
+          <p><%= event.description %></p>
+        </div>
+      <% end %> 
+    </div>
+  </div>
+</div>
+<div>
+  <div class="title-ctn">
+    <h2 class="f-event-title">UPCOMING EVENTS</h2>
+    <div class="cards">
+      <% @upcoming_events.each do |event| %>
+        <div class="card">
+          <h2><%= link_to event.title, event_path(event), class: "event-title" %></h2>
+          <p><%= event.description %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="title-ctn">
+    <h2 class="f-event-title">PAST EVENTS</h2>
+    <div class="cards">
+      <% @past_events.each do |event| %>
+        <div class="card">
+          <h2><%= link_to event.title, event_path(event), class: "event-title" %></h2>
+          <p><%= event.description %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="footer">
+    <p>&copy; dsultonova</p>
+  </div>
+</div>

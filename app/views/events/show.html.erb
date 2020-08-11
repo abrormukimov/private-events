@@ -1,0 +1,18 @@
+<div class="ctn">
+  <div class="block">
+    <img src="https://api.adorable.io/avatars/285/abott@adorable.io.png" alt="">
+    <div>
+      <h2><%= @event.title %></h2>
+      <p><%= @event.description %></p>
+      <p><%= @event.date %></p><br>
+      <h4>List of Attendees</h4>
+      <p><%= list_of_attendees %></p>
+    </div>
+  </div>
+  <div class="back-to">
+    <%= link_to "Homepage", root_path, class: "back" %>
+  </div>
+  <div class="back-to">
+    <%= link_to "Back to Profile", user_path(current_user), class: "back" %>
+  </div>
+</div>
